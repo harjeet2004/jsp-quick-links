@@ -6,56 +6,26 @@
   <title>JSP Educonsultants — Quick Links</title>
   <meta name="description" content="Quick access to JSP Educonsultants: email, website, company booklet, and interest survey." />
   <meta name="theme-color" content="#0f172a" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' ry='12' fill='%230f172a'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif' font-size='28' fill='%23f8fafc'%3EJSP%3C/text%3E%3C/svg%3E"/>
-
   <style>
-    :root{
-      --bg:#0b1220;        /* page background */
-      --card:#0f172a;      /* card background */
-      --muted:#94a3b8;     /* secondary text */
-      --text:#e2e8f0;      /* primary text */
-      --brand:#22c55e;     /* accent */
-      --brand-2:#38bdf8;   /* secondary accent */
-      --radius: 18px;
-      --shadow: 0 10px 30px rgba(2,6,23,.45);
-    }
+    :root{ --bg:#0b1220; --card:#0f172a; --muted:#94a3b8; --text:#e2e8f0; --brand:#22c55e; --brand-2:#38bdf8; --radius:18px; --shadow:0 10px 30px rgba(2,6,23,.45); }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{
-      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1000px 600px at 10% -10%, rgba(34,197,94,.15), transparent 60%),
-        radial-gradient(800px 500px at 110% 10%, rgba(56,189,248,.12), transparent 60%),
-        var(--bg);
-      display:grid; place-items:center; padding:32px;
-    }
-    .wrap{width:min(980px,100%);}
-    header{display:flex; align-items:center; gap:16px; margin-bottom:20px;}
-    .logo{display:grid; place-items:center; width:56px; height:56px; border-radius:14px; background:linear-gradient(135deg,#22c55e, #16a34a); box-shadow: var(--shadow)}
-    .logo svg{width:32px; height:32px;}
-    h1{font-size: clamp(22px, 3.5vw, 34px); margin:0}
-    .sub{color:var(--muted); margin-top:6px}
-
-    .card{background:rgba(15,23,42,.70); backdrop-filter:saturate(150%) blur(8px); border:1px solid rgba(148,163,184,.15); border-radius: var(--radius); box-shadow: var(--shadow);}
-    .grid{display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:14px}
-    @media (max-width:640px){ .grid{grid-template-columns:1fr} }
-
-    .link{display:flex; align-items:center; gap:14px; padding:16px 18px; border-radius:14px; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(148,163,184,.15); text-decoration:none; color:var(--text); transition:.2s transform, .2s box-shadow, .2s border-color}
-    .link:hover{transform: translateY(-1px); box-shadow:0 8px 20px rgba(2,6,23,.35); border-color: rgba(56,189,248,.35)}
-    .link .icon{width:34px; height:34px; display:grid; place-items:center; border-radius:10px; background:rgba(56,189,248,.12);}
+    body{ margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; color:var(--text);
+      background: radial-gradient(1000px 600px at 10% -10%, rgba(34,197,94,.15), transparent 60%), radial-gradient(800px 500px at 110% 10%, rgba(56,189,248,.12), transparent 60%), var(--bg);
+      display:grid; place-items:center; padding:32px; }
+    .wrap{width:min(980px,100%);} header{display:flex; align-items:center; gap:16px; margin-bottom:20px;}
+    .logo{display:grid; place-items:center; width:56px; height:56px; border-radius:14px; background:linear-gradient(135deg,#22c55e,#16a34a); box-shadow:var(--shadow)}
+    .logo svg{width:32px;height:32px}
+    h1{font-size:clamp(22px,3.5vw,34px); margin:0} .sub{color:var(--muted); margin-top:6px}
+    .card{background:rgba(15,23,42,.70); backdrop-filter:saturate(150%) blur(8px); border:1px solid rgba(148,163,184,.15); border-radius:var(--radius); box-shadow:var(--shadow)}
+    .grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; padding:18px}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+    .link{display:flex; align-items:center; gap:14px; padding:16px 18px; border-radius:14px; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(148,163,184,.15); text-decoration:none; color:var(--text); transition:.2s transform,.2s box-shadow,.2s border-color}
+    .link:hover{transform:translateY(-1px); box-shadow:0 8px 20px rgba(2,6,23,.35); border-color:rgba(56,189,248,.35)}
+    .link .icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:rgba(56,189,248,.12)}
     .link .txt{display:grid}
     .link .lbl{font-weight:600}
     .link .url{font-size:13px; color:var(--muted)}
-
-    .panel{display:grid; grid-template-columns: 1fr 260px; gap:18px; padding:18px}
-    @media (max-width:880px){ .panel{grid-template-columns: 1fr} }
-
-    .qrbox{padding:16px; border:1px dashed rgba(148,163,184,.25); border-radius:14px; display:grid; place-items:center; gap:10px}
-    .qr-cta{display:flex; gap:10px; flex-wrap:wrap}
-    .btn{appearance:none; border:1px solid rgba(148,163,184,.25); background:linear-gradient(180deg, rgba(34,197,94,.18), rgba(34,197,94,.10)); color:var(--text); padding:10px 14px; border-radius:12px; font-weight:600; cursor:pointer}
-    .btn:hover{box-shadow: 0 0 0 3px rgba(34,197,94,.25)}
-    .hint{font-size:12px; color:var(--muted)}
     footer{margin-top:18px; color:var(--muted); font-size:12px; text-align:center}
   </style>
 </head>
@@ -63,7 +33,6 @@
   <main class="wrap">
     <header>
       <div class="logo" aria-hidden="true">
-        <!-- Simple mortarboard icon -->
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="JSP logo">
           <path d="M12 3L2 8l10 5 8-4.1V14h2V8L12 3Z" fill="#052e16"/>
           <path d="M6 11.5V15c0 1.66 2.69 3 6 3s6-1.34 6-3v-3.2L12 16 6 11.5Z" fill="#bbf7d0"/>
@@ -76,47 +45,28 @@
       </div>
     </header>
 
-    <section class="card panel" aria-label="Quick links and QR">
+    <section class="card" aria-label="Quick links">
       <div class="grid" role="list">
         <a class="link" role="listitem" href="mailto:contact@jspeduconsultants.com" aria-label="Email JSP Educonsultants">
-          <span class="icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2Z" stroke="#38bdf8" stroke-width="1.6"/><path d="m3 7 9 7 9-7" stroke="#22c55e" stroke-width="1.6"/></svg>
-          </span>
+          <span class="icon" aria-hidden="true">📧</span>
           <span class="txt"><span class="lbl">Email</span><span class="url">contact@jspeduconsultants.com</span></span>
         </a>
 
         <a class="link" role="listitem" href="https://www.jspeduconsultants.com/" target="_blank" rel="noopener" aria-label="Visit website">
-          <span class="icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#38bdf8" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9S14.5 18.5 12 21m0-18c-2.5 2.5-3.8 5.7-3.8 9S9.5 18.5 12 21" stroke="#22c55e" stroke-width="1.6"/></svg>
-          </span>
+          <span class="icon" aria-hidden="true">🌐</span>
           <span class="txt"><span class="lbl">Website</span><span class="url">jspeduconsultants.com</span></span>
         </a>
 
         <a class="link" role="listitem" href="https://drive.google.com/file/d/1Iygz0RvGorifsULsUdIj21Ypg0Nl9Xzs/view?usp=sharing" target="_blank" rel="noopener" aria-label="Open company booklet">
-          <span class="icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4h7l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="#38bdf8" stroke-width="1.6"/><path d="M13 4v5h5" stroke="#22c55e" stroke-width="1.6"/></svg>
-          </span>
+          <span class="icon" aria-hidden="true">📄</span>
           <span class="txt"><span class="lbl">Booklet</span><span class="url">Google Drive (PDF)</span></span>
         </a>
 
-        <a class="link" role="listitem" href="https://docs.google.com/forms/d/1GYredaCdIeO6O0BuHNm2-JL8bqH85VbVm-X7wix7zuc/edit" target="_blank" rel="noopener" aria-label="Open survey form">
-          <span class="icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#38bdf8" stroke-width="1.6"/><path d="M7 8h10M7 12h6M7 16h8" stroke="#22c55e" stroke-width="1.6"/></svg>
-          </span>
-          <span class="txt"><span class="lbl">Survey</span><span class="url">Google Form (check sharing)</span></span>
+        <a class="link" role="listitem" href="https://docs.google.com/forms/d/1GYredaCdIeO6O0BuHNm2-JL8bqH85VbVm-X7wix7zuc/viewform" target="_blank" rel="noopener" aria-label="Open survey form">
+          <span class="icon" aria-hidden="true">📝</span>
+          <span class="txt"><span class="lbl">Survey</span><span class="url">Google Form</span></span>
         </a>
       </div>
-
-      <aside>
-        <div class="qrbox" aria-live="polite">
-          <div id="qrcode" aria-label="QR code to this page"></div>
-          <div class="qr-cta">
-            <button class="btn" id="downloadPng">Download QR (PNG)</button>
-            <button class="btn" id="print">Print Card</button>
-          </div>
-          <div class="hint">Tip: This QR auto-uses the page URL once hosted. Print and place on brochures, tables, or slides.</div>
-        </div>
-      </aside>
     </section>
 
     <footer>
@@ -124,61 +74,8 @@
     </footer>
   </main>
 
-  <!-- Lightweight QRCode generator (davidshimjs) embedded locally -->
   <script>
-  /*! QRCode.js v1.0.0 (MIT) — https://github.com/davidshimjs/qrcodejs */
-  !function(o){function u(a,b){this._el=a,this._htOption=b}function i(a,b){if(a){var c="";b&&(c+='<img src="'+a+'" alt="QR Code"/>');var d=document.createElement("div");d.innerHTML=c;var e=d.childNodes[0];return e}return null}function e(a,b){this.typeNumber=a,this.errorCorrectLevel=b,this.modules=null,this.moduleCount=0,this.dataCache=null,this.dataList=[]}function t(a,b){if(void 0==a.length)throw new Error(a.length+"/"+b);for(var c=0;c<a.length&&0==a[c];)c++;this.num=new Array(a.length-c+b);for(var d=0;d<a.length-c;d++)this.num[d]=a[d+c]}function n(a,b){this.totalCount=a,this.dataCount=b}function r(){this.buffer=[],this.length=0}function s(){return "undefined"!=typeof CanvasRenderingContext2D}function f(){var a=document.createElement("canvas");return!!(a.getContext&&a.getContext("2d"))}function h(){var a=document.createElement("div");return a}function l(a,b){if(void 0==a.length)throw new Error(a.length+"/"+b);for(var c=0;c<a.length&&0==a[c];)c++;this.num=new Array(a.length-c+b);for(var d=0;d<a.length-c;d++)this.num[d]=a[d+c]}u.prototype.draw=function(a){this._el.innerHTML="",this._oQRCode=new e(this._htOption.typeNumber,this._htOption.errorCorrectLevel),this._oQRCode.addData(a),this._oQRCode.make();for(var b=this._el,c=document.createElement("canvas"),d=c.getContext("2d"),f=this._htOption.width,h=this._htOption.height,g=Math.round(f/this._oQRCode.getModuleCount()),i=Math.round(h/this._oQRCode.getModuleCount()),j=f-g*this._oQRCode.getModuleCount(),k=h-i*this._oQRCode.getModuleCount(),l=0;l<h;l++)for(var m=0;m<f;m++){var n=Math.floor(m/g),o=Math.floor(l/i);this._oQRCode.isDark(o,n)?d.fillStyle="#000":d.fillStyle="#fff",d.fillRect(m,l,1,1)}c.width=f,c.height=h,d.drawImage(c,0,0),b.appendChild(c)},e.prototype.addData=function(a){var b=new v(a);this.dataList.push(b),this.dataCache=null},e.prototype.isDark=function(a,b){if(0>a||this.moduleCount<=a||0>b||this.moduleCount<=b)throw new Error(a+","+b);return this.modules[a][b]},e.prototype.getModuleCount=function(){return this.moduleCount},e.prototype.make=function(){if(this.typeNumber<1||this.typeNumber>40)throw new Error("typeNumber out");this._makeImpl(!1,this.getBestMaskPattern())},e.prototype._makeImpl=function(a,b){this.moduleCount=21+4*(this.typeNumber-1),this.modules=new Array(this.moduleCount);for(var c=0;c<this.moduleCount;c++){this.modules[c]=new Array(this.moduleCount);for(var d=0;d<this.moduleCount;d++)this.modules[c][d]=null}this._setupPositionProbePattern(0,0),this._setupPositionProbePattern(this.moduleCount-7,0),this._setupPositionProbePattern(0,this.moduleCount-7),this._setupPositionAdjustPattern(),this._setupTimingPattern(),this._setupTypeInfo(a,b),this.typeNumber>=7&&this._setupTypeNumber(a),null==this.dataCache&&(this.dataCache=e.createData(this.typeNumber,this.errorCorrectLevel,this.dataList)),this._mapData(this.dataCache,b)},e.prototype._setupPositionProbePattern=function(a,b){for(var c=-1;c<=7;c++)if(!(0>a+c||this.moduleCount<=a+c))for(var d=-1;d<=7;d++)0>b+d||this.moduleCount<=b+d||(this.modules[a+c][b+d]=c>=0&&c<=6&&(0==d||6==d)||d>=0&&d<=6&&(0==c||6==c)||c>=2&&c<=4&&d>=2&&d<=4)},e.prototype._getErrorCorrectPolynomial=function(a){for(var b=new t([1],0),c=0;c<a;c++)b=b.multiply(new t([1,Math.gexp(c)],0));return b},e.prototype._setupTimingPattern=function(){for(var a=8;a<this.moduleCount-8;a++)null==this.modules[a][6]&&(this.modules[a][6]=a%2==0);for(var b=8;b<this.moduleCount-8;b++)null==this.modules[6][b]&&(this.modules[6][b]=b%2==0)},e.prototype._setupPositionAdjustPattern=function(){for(var a=e.getPatternPosition(this.typeNumber),b=0;b<a.length;b++)for(var c=0;c<a.length;c++){var d=a[b],f=a[c];if(null==this.modules[d][f])for(var g=-2;g<=2;g++)for(var h=-2;h<=2;h++)this.modules[d+g][f+h]=g==-2||2==g||h==-2||2==h||0==g&&0==h}},e.prototype._setupTypeNumber=function(a){for(var b=e.getBCHTypeNumber(this.typeNumber),c=0;c<18;c++){var d=!a&&1==(b>>c&1);this.modules[Math.floor(c/3)][c%3+this.moduleCount-8-3]=d}for(var f=0;f<18;f++){var g=!a&&1==(b>>f&1);this.modules[f%3+this.moduleCount-8-3][Math.floor(f/3)]=g}},e.prototype._setupTypeInfo=function(a,b){for(var c=e.getBCHTypeInfo(this.errorCorrectLevel<<3|b),d=0;d<15;d++){var f=!a&&1==(c>>d&1);d<6?this.modules[d][8]=f:6==d?this.modules[d+1][8]=f:d<8?this.modules[d+1][8]=f:this.modules[this.moduleCount-15+d][8]=f}for(var g=0;g<15;g++){var h=!a&&1==(c>>g&1);g<8?this.modules[8][this.moduleCount-g-1]=h:g<9?this.modules[8][15-g-1+1]=h:this.modules[8][15-g-1]=h}this.modules[this.moduleCount-8][8]=!a},e.prototype._mapData=function(a,b){for(var c=-1,d=this.moduleCount-1,f=7,h=0,g=e.getMaskFunction(b),i=this.moduleCount-1;i>0;i-=2)for(6==i&&i--;;){for(var j=0;j<2;j++)if(null==this.modules[d][i-j]){var k=!1;h<a.length&&(k=1==(a[h]>>>f&1));var l=g(d,i-j);l&&(k=!k),this.modules[d][i-j]=k,f--,-1==f&&(h++,f=7)}if(d+=c,0>d||this.moduleCount<=d){d-=c,c=-c;break}}},e.PAD0=236,e.PAD1=17,e.createData=function(a,b,c){for(var d=n.getRSBlocks(a,b),f=new r,g=0;g<c.length;g++){var h=c[g];f.put(h.mode,4),f.put(h.getLength(),e.getLengthInBits(h.mode,a)),h.write(f)}for(var i=0,j=0;j<d.length;j++)i+=d[j].dataCount;for(;f.getLengthInBits()>8*i;)throw new Error("code length overflow. ("+f.getLengthInBits()+"%3E"+8*i+")");for(f.getLengthInBits()+4<=8*i&&f.put(0,4);f.getLengthInBits()%8!=0;)f.putBit(!1);for(;!(f.getLengthInBits()>=8*i);)f.put(e.PAD0,8),f.getLengthInBits()>=8*i||f.put(e.PAD1,8);return e.createBytes(f,d)},e.createBytes=function(a,b){for(var c=0,d=0,f=0,g=new Array(b.length),h=new Array(b.length),i=0;i<b.length;i++){var j=b[i].dataCount,k=b[i].totalCount-j;d=Math.max(d,j),f=Math.max(f,k),g[i]=new r,h[i]=new r}for(i=0;i<b.length;i++){for(var l=a.getBuffer(),m=0;m<g[i].buffer.length;m++)g[i].put(g[i].buffer[m],8);for(m=0;m<b[i].dataCount;m++)g[i].put(l[c+m],8);c+=b[i].dataCount}for(i=0;i<b.length;i++){for(m=0;m<f;m++)h[i].put(0,8)}for(var n2=[],o=0;o<b.length;o++)for(m=0;m<g[o].buffer.length;m++)n2.push(g[o].buffer[m]);return n2};
-  function v(a){this.mode=4,this.data=a}v.prototype.getLength=function(){return this.data.length},v.prototype.write=function(a){for(var b=0;b<this.data.length;b++)a.put(this.data.charCodeAt(b),8)};
-  r.prototype.getBuffer=function(){return this.buffer},r.prototype.getLengthInBits=function(){return this.length},r.prototype.put=function(a,b){for(var c=0;c<b;c++)this.putBit(1==(a>>>b-c-1&1))},r.prototype.putBit=function(a){var b=Math.floor(this.length/8);this.buffer.length<=b&&this.buffer.push(0),a&&(this.buffer[b]|=128>>>this.length%8),this.length++};
-  n.getRSBlocks=function(a,b){return[n.getRSBlockTable(a,b)].flat()};
-  n.getRSBlockTable=function(a,b){var c={1:{L:new n(19,19),M:new n(16,16),Q:new n(13,13),H:new n(9,9)},2:{L:new n(34,34),M:new n(28,28),Q:new n(22,22),H:new n(16,16)},3:{L:new n(55,55),M:new n(44,44),Q:new n(34,34),H:new n(26,26)},4:{L:new n(80,80),M:new n(64,64),Q:new n(48,48),H:new n(36,36)},5:{L:new n(108,108),M:new n(86,86),Q:new n(62,62),H:new n(46,46)},6:{L:new n(136,136),M:new n(108,108),Q:new n(76,76),H:new n(60,60)},7:{L:new n(156,156),M:new n(124,124),Q:new n(88,88),H:new n(66,66)},8:{L:new n(194,194),M:new n(154,154),Q:new n(110,110),H:new n(86,86)},9:{L:new n(232,232),M:new n(182,182),Q:new n(132,132),H:new n(100,100)},10:{L:new n(274,274),M:new n(216,216),Q:new n(154,154),H:new n(122,122)}};return c[a]&&c[a].M||c[4].M};
-  e.getBCHTypeInfo=function(a){for(var b=a<<10; e.getBCHDigit(b)-e.getBCHDigit(1335)>=0;)b^=1335<<e.getBCHDigit(b)-e.getBCHDigit(1335);return a<<10|b},e.getBCHTypeNumber=function(a){for(var b=a<<12; e.getBCHDigit(b)-e.getBCHDigit(7973)>=0;)b^=7973<<e.getBCHDigit(b)-e.getBCHDigit(7973);return a<<12|b},e.getBCHDigit=function(a){var b=0;while(0!=a)b++,a>>>=1;return b},e.getPatternPosition=function(a){return[6,18,22,26,30,34,22,24,26,28][a]?[6,18,22,26,30,34,22,24,26,28][a]:[6,18,22,26,30,34]},e.getMaskFunction=function(a){switch(a){case 0:return function(a,b){return (a+b)%2==0};case 1:return function(a,b){return a%2==0};case 2:return function(a,b){return b%3==0};case 3:return function(a,b){return (a+b)%3==0};case 4:return function(a,b){return (Math.floor(a/2)+Math.floor(b/3))%2==0};case 5:return function(a,b){return a*b%2+a*b%3==0};case 6:return function(a,b){return (a*b%2+a*b%3)%2==0};case 7:return function(a,b){return ((a+b)%2+a*b%3)%2==0};default:return function(){return!1}}},e.getLengthInBits=function(a,b){return 8*b};
-  o.QRCode=e,o.QRCodeDraw=u,o._qrcode_i=i,o._Polynomial=t,o._RSBlock=n,o._BitBuffer=r,o._isCanvasSupported=f,o._createElement=h,o._GaloisExp=l,o.Math||(o.Math={}),o.Math.glog=function(a){for(var b=0;1!=a;)a>>=1,b++;return b},o.Math.gexp=function(a){return 1<<a}}(window);
-  </script>
-
-  <script>
-    // ---- Runtime logic ----
-    (function(){
-      const yr = document.getElementById('yr');
-      yr.textContent = new Date().getFullYear();
-
-      const container = document.getElementById('qrcode');
-      const url = window.location.href; // when hosted, this will be the live page URL
-
-      // Render QR at 220x220
-      const drawer = new QRCodeDraw(container, { width: 220, height: 220, typeNumber: 4, errorCorrectLevel: 1 });
-      drawer.draw(url);
-
-      // Download QR as PNG
-      document.getElementById('downloadPng').addEventListener('click', () => {
-        const canvas = container.querySelector('canvas');
-        if(!canvas) return alert('QR not ready yet!');
-        const a = document.createElement('a');
-        a.href = canvas.toDataURL('image/png');
-        a.download = 'JSP-QR.png';
-        a.click();
-      });
-
-      // Print a tidy card (QR + title + URL)
-      document.getElementById('print').addEventListener('click', () => {
-        const canvas = container.querySelector('canvas');
-        const dataURL = canvas ? canvas.toDataURL('image/png') : '';
-        const w = window.open('', 'printWin');
-        w.document.write(`<!doctype html><html><head><meta charset='utf-8'><title>Print QR</title>
-          <style>body{font-family:system-ui,Segoe UI,Roboto,sans-serif;margin:0;display:grid;place-items:center;height:100vh}
-          .card{border:1px solid #ddd;border-radius:16px;padding:20px 24px;text-align:center}
-          .url{color:#111827;font-weight:600;margin-top:8px;max-width:420px;word-break:break-all}
-          .brand{color:#16a34a;margin:0 0 10px 0;font-weight:700}
-          </style></head><body>
-          <div class='card'>
-            <h2 class='brand'>JSP Educonsultants</h2>
-            <img src='${dataURL}' width='220' height='220' alt='QR code'>
-            <div class='url'>${url}</div>
-          </div>
-        </body></html>`);
-        w.document.close(); w.focus(); w.print();
-      });
-    })();
+    document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
